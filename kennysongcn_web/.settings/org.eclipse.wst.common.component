@@ -5,6 +5,9 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/WebContent"/>
+        <dependent-module archiveName="kennysongcn_providers.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/kennysongcn_providers/kennysongcn_providers">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="kennysongcn_web"/>
         <property name="java-output-path" value="/kennysongcn_web/target/classes"/>
     </wb-module>

@@ -3,6 +3,7 @@
 	<name>kennysongcn_web</name>
 	<comment></comment>
 	<projects>
+		<project>kennysongcn_providers</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
