@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kennysongcn.providers.admin.mapper.user.PermissionMapper">
+	<resultMap id="permissionResult" type="Permission">
+		<id column="PERMISSION_ID" property="permissionId" jdbcType="INTEGER" />
+		<result column="PERMISSION_NAME" property="permissionName" jdbcType="VARCHAR" />
+		<result column="PERMISSION_SN" property="permissionSn" jdbcType="VARCHAR" />
+		<result column="MODULE_ID" property="moduleId" jdbcType="INTEGER" />
+		<result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="UPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP" />
+		<result column="REMARK" property="remark" jdbcType="VARCHAR" />
+	</resultMap>
+
+		<select id="getPermissionByRoleId" parameterType="java.lang.Integer" resultMap="permissionResult">
+		SELECT
+			tp.PERMISSION_ID,
+			tp.PERMISSION_NAME,
+			tp.PERMISSION_SN,
+			tp.MODULE_ID,
+			tp.CREATE_TIME,
+			tp.UPDATE_TIME,
+			tp.REMARK
+		FROM
+			T_ROLE tr,
+			T_ROLE_PERMISSION trp,
+			T_PERMISSION tp
+		WHERE
+			tr.ROLE_ID = trp.ROLE_ID
+		AND tp.PERMISSION_ID = trp.PERMISSION_ID
+		AND tr.ROLE_ID = #{roleId}
+	</select>
+	 
+</mapper>

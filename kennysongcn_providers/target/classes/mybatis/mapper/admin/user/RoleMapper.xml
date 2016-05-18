@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kennysongcn.providers.admin.mapper.user.RoleMapper">
+	<resultMap id="roleResult" type="Role">
+		<id column="ROLE_ID" property="roleId" jdbcType="INTEGER" />
+		<result column="ROLE_NAME" property="roleName" jdbcType="VARCHAR" />
+		<result column="IS_VALID" property="isValid" jdbcType="INTEGER" />
+		<result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="UPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP" />
+		<result column="REMARK" property="remark" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<select id="getAllRole" resultMap="roleResult">
+		SELECT ROLE_ID,ROLE_NAME,IS_VALID,CREATE_TIME,UPDATE_TIME,REMARK FROM T_ROLE r
+	</select>
+	
+	<select id="getUserRolesByUserId" parameterType="java.lang.Integer"  resultMap="roleResult">
+		SELECT tr.ROLE_ID AS ROLE_ID,tr.ROLE_NAME AS ROLE_NAME FROM T_USER_INFO tu, T_ROLE tr,T_USER_ROLE tur 
+		WHERE tu.user_id = tur.USER_INFO_ID AND tr.ROLE_ID = tur.ROLE_ID AND tu.user_id = #{userId}
+	</select>
+</mapper>

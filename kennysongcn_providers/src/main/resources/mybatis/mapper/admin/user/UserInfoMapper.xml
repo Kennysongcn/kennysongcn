@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kennysongcn.providers.admin.mapper.user.UserInfoMapper">
+  <resultMap id="BaseResultMap" type="UserInfo" >
+    <id column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="group_id" property="groupId" jdbcType="INTEGER" />
+    <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    <result column="user_pwd" property="userPwd" jdbcType="VARCHAR" />
+    <result column="user_phone" property="userPhone" jdbcType="INTEGER" />
+    <result column="user_sex" property="userSex" jdbcType="VARCHAR" />
+    <result column="user_qq" property="userQq" jdbcType="INTEGER" />
+    <result column="user_email" property="userEmail" jdbcType="VARCHAR" />
+    <result column="user_address" property="userAddress" jdbcType="VARCHAR" />
+    <result column="user_mark" property="userMark" jdbcType="INTEGER" />
+    <result column="user_rank_id" property="userRankId" jdbcType="TINYINT" />
+    <result column="user_last_login_ip" property="userLastLoginIp" jdbcType="VARCHAR" />
+    <result column="user_birthday" property="userBirthday" jdbcType="INTEGER" />
+    <result column="user_description" property="userDescription" jdbcType="VARCHAR" />
+    <result column="user_image_url" property="userImageUrl" jdbcType="VARCHAR" />
+    <result column="user_school" property="userSchool" jdbcType="VARCHAR" />
+    <result column="user_register_time" property="userRegisterTime" jdbcType="INTEGER" />
+    <result column="user_register_ip" property="userRegisterIp" jdbcType="VARCHAR" />
+    <result column="user_last_update_time" property="userLastUpdateTime" jdbcType="INTEGER" />
+    <result column="user_weibo" property="userWeibo" jdbcType="VARCHAR" />
+    <result column="user_blood_type" property="userBloodType" jdbcType="CHAR" />
+    <result column="user_says" property="userSays" jdbcType="VARCHAR" />
+    <result column="user_lock" property="userLock" jdbcType="TINYINT" />
+    <result column="user_freeze" property="userFreeze" jdbcType="TINYINT" />
+    <result column="user_power" property="userPower" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    user_id, group_id, user_name, user_pwd, user_phone, user_sex, user_qq, user_email, 
+    user_address, user_mark, user_rank_id, user_last_login_ip, user_birthday, user_description, 
+    user_image_url, user_school, user_register_time, user_register_ip, user_last_update_time, 
+    user_weibo, user_blood_type, user_says, user_lock, user_freeze, user_power
+  </sql>
+  
+    <select id="getUserInfoByLoginNameAndPwd" resultMap="BaseResultMap" parameterType="UserInfo" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_user_info
+    where user_name = #{userName} AND user_pwd = #{userPwd}
+  </select>
+  
+   <select id="getUserByUserId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_user_info
+    where user_id = #{id}
+  </select>
+  <!-- 
+	
+	<select id="getAllUser" parameterType="UserInfo"
+		resultMap="userResult">
+		SELECT * from (
+		SELECT USER_INFO_ID,NAME,LOGINNAME,LOGINPWD,EMAIL,TELPHONE,OA_POSITION_ID,POSITION_NAME,DEPARTMENT,SUPERIOR,USER_CODE,USER_STATUS,CREATE_TIME,UPDATE_TIME FROM T_USER_INFO
+		<where>
+			<if test="user.name != null">
+				NAME like CONCAT('%','${user.name}','%' )
+			</if>
+			<if test="user.telphone != null">
+				AND TELPHONE = #{user.telphone}
+			</if>
+		</where>
+		) t LIMIT  #{page.start},#{page.limit}
+	</select>
+	<select id="getAllUserCount" parameterType="UserInfo"
+		resultType="java.lang.Integer">
+		
+		SELECT count(*) FROM T_USER_INFO
+		<where>
+			<if test="name != null">
+				NAME like CONCAT('%','${name}','%' )
+			</if>
+			<if test="telphone != null">
+				AND TELPHONE = #{telphone}
+			</if>
+		</where>
+		</select> -->
+</mapper>
