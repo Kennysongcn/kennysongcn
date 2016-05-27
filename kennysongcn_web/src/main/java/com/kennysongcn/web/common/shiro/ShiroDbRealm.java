@@ -99,7 +99,7 @@ public class ShiroDbRealm extends AuthorizingRealm {
 		}
 		ShiroUser shiroUser = (ShiroUser) collection.iterator().next();
 		// 设置、更新User
-		shiroUser.setUser(userInfoService.getUserByUserId(shiroUser.getId()));
+		shiroUser.setUser(userInfoService.getUserInfoByUserId(shiroUser.getId()));
 		return newAuthorizationInfo(shiroUser);
 	}
 

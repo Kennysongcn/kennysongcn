@@ -49,33 +49,33 @@
     from t_user_info
     where user_id = #{id}
   </select>
-  <!-- 
 	
 	<select id="getAllUser" parameterType="UserInfo"
-		resultMap="userResult">
+		resultMap="BaseResultMap">
 		SELECT * from (
-		SELECT USER_INFO_ID,NAME,LOGINNAME,LOGINPWD,EMAIL,TELPHONE,OA_POSITION_ID,POSITION_NAME,DEPARTMENT,SUPERIOR,USER_CODE,USER_STATUS,CREATE_TIME,UPDATE_TIME FROM T_USER_INFO
-		<where>
+		SELECT 
+		<include refid="Base_Column_List" />
+		 FROM T_USER_INFO
+<!-- 		<where>
 			<if test="user.name != null">
 				NAME like CONCAT('%','${user.name}','%' )
 			</if>
 			<if test="user.telphone != null">
 				AND TELPHONE = #{user.telphone}
 			</if>
-		</where>
+		</where> -->
 		) t LIMIT  #{page.start},#{page.limit}
 	</select>
 	<select id="getAllUserCount" parameterType="UserInfo"
 		resultType="java.lang.Integer">
-		
 		SELECT count(*) FROM T_USER_INFO
-		<where>
+	<!-- 	<where>
 			<if test="name != null">
 				NAME like CONCAT('%','${name}','%' )
 			</if>
 			<if test="telphone != null">
 				AND TELPHONE = #{telphone}
 			</if>
-		</where>
-		</select> -->
+		</where> -->
+	</select>
 </mapper>

@@ -16,17 +16,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  <!-- ------------------js--------------- -->
 <script src="<%=basePath%>static/js-frame/bootstrap/js/bootstrap.min.js"></script>
 <script src="<%=basePath%>static/js-frame/bootstrap/js/Chart.min.js"></script>
-<script src="<%=basePath%>static/js-frame/bootstrap/js/table/bootstrap-table.min.js"></script> 
+<%-- <script src="<%=basePath%>static/js-frame/bootstrap/js/table/bootstrap-table.min.js"></script> 
 <script src="<%=basePath%>static/js-frame/bootstrap/js/table/bootstrap-table-locale-all.min.js"></script> 
 <script src="<%=basePath%>static/js-frame/bootstrap/js/table/bootstrap-table-en-US.js"></script> 
-<script src="<%=basePath%>static/js-frame/bootstrap/js/table/bootstrap-table-zh-CN.js"></script> 
+<script src="<%=basePath%>static/js-frame/bootstrap/js/table/bootstrap-table-zh-CN.js"></script>  --%>
 <!--  css --> 
 <link rel="stylesheet" href="<%=basePath%>static/js-frame/bootstrap/css/bootstrap.css" /> 
 <%-- <link rel="stylesheet" href="<%=basePath%>static/js-frame/bootstrap/css/bootstrap.min.css" />  --%>
-<link rel="stylesheet" href="<%=basePath%>static/js-frame/bootstrap/css/bootstrap.css.map" />
+<%-- <link rel="stylesheet" href="<%=basePath%>static/js-frame/bootstrap/css/bootstrap.css.map" /> --%>
 <link rel="stylesheet" href="<%=basePath%>static/js-frame/bootstrap/css/bootstrap-theme.min.css" />
-<link rel="stylesheet" href="<%=basePath%>static/js-frame/bootstrap/css/bootstrap-table.min.css" />
-<link rel="stylesheet" href="<%=basePath%>static/js-frame/bootstrap/css/jquery.dataTables.css" />
+<%-- <link rel="stylesheet" href="<%=basePath%>static/js-frame/bootstrap/css/bootstrap-table.min.css" />
+<link rel="stylesheet" href="<%=basePath%>static/js-frame/bootstrap/css/jquery.dataTables.css" /> --%>
 
 
 <!-- =======================Extjs======================= -->

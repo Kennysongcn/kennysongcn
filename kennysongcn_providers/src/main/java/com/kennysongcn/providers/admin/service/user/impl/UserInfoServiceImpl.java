@@ -22,15 +22,15 @@ public class UserInfoServiceImpl implements UserInfoService{
 	@Override
 	public List<UserInfo> getAllUser(UserInfo user, PageInfo page) {
 		// TODO Auto-generated method stub
-		//List<UserInfo> result = userMapper.getAllUser(user,page);
-		return null;//result;
+		List<UserInfo> result = userMapper.getAllUser(user,page);
+		return result;
 	}
 
 	@Override
 	public Integer getAllUserCount(UserInfo user) {
 		// TODO Auto-generated method stub
 		
-		return null;// userMapper.getAllUserCount(user);
+		return userMapper.getAllUserCount(user);
 	}
 
 	@Override
@@ -48,8 +48,8 @@ public class UserInfoServiceImpl implements UserInfoService{
 	}
 
 	@Override
-	public UserInfo getUserByUserId(Integer id) {
-		UserInfo userInfo = userMapper.getUserByUserId(id);
+	public UserInfo getUserInfoByUserId(Integer userId) {
+		UserInfo userInfo = userMapper.getUserByUserId(userId);
 		return userInfo;
 	}
 

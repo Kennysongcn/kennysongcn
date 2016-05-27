@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <title>资源管理系统</title>
 <%@ include file="/common.jsp"%>
-<script type="text/javascript" src="${contextPath}/static/js-custom/admin/app/indexApp/Application.js"></script>
+<script type="text/javascript" src="${contextPath}/static/js-custom/admin/apps/module/Application.js"></script>
 <link href="${contextPath}/static/css/admin/index.css" rel="stylesheet">
 </head>
 <body>

@@ -31,7 +31,7 @@ public class ModuleController extends BaseController {
 	@Autowired
 	private ModuleService moduleService;
 
-	@RequestMapping(value="getModules",method = RequestMethod.POST)
+	@RequestMapping(value="getModules",method = RequestMethod.GET)
 	@ResponseBody
 	public List<ModuleDto>  getModules(Model model, Integer systemInfoId){
 		List<ModuleDto> result = new ArrayList<ModuleDto>();

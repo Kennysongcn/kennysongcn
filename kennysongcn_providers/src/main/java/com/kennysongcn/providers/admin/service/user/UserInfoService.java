@@ -19,7 +19,7 @@ public interface UserInfoService {
 
 	public void updateUserInfo(UserInfo tempUser);
 
-	public UserInfo getUserByUserId(Integer id);
+	public UserInfo getUserInfoByUserId(Integer userId);
 
 
 }
