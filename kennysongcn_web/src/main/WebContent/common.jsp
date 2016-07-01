@@ -16,19 +16,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  <!-- ------------------js--------------- -->
 <script src="<%=basePath%>static/js-frame/bootstrap/js/bootstrap.min.js"></script>
 <script src="<%=basePath%>static/js-frame/bootstrap/js/Chart.min.js"></script>
-<%-- <script src="<%=basePath%>static/js-frame/bootstrap/js/table/bootstrap-table.min.js"></script> 
-<script src="<%=basePath%>static/js-frame/bootstrap/js/table/bootstrap-table-locale-all.min.js"></script> 
-<script src="<%=basePath%>static/js-frame/bootstrap/js/table/bootstrap-table-en-US.js"></script> 
-<script src="<%=basePath%>static/js-frame/bootstrap/js/table/bootstrap-table-zh-CN.js"></script>  --%>
 <!--  css --> 
 <link rel="stylesheet" href="<%=basePath%>static/js-frame/bootstrap/css/bootstrap.css" /> 
-<%-- <link rel="stylesheet" href="<%=basePath%>static/js-frame/bootstrap/css/bootstrap.min.css" />  --%>
-<%-- <link rel="stylesheet" href="<%=basePath%>static/js-frame/bootstrap/css/bootstrap.css.map" /> --%>
 <link rel="stylesheet" href="<%=basePath%>static/js-frame/bootstrap/css/bootstrap-theme.min.css" />
-<%-- <link rel="stylesheet" href="<%=basePath%>static/js-frame/bootstrap/css/bootstrap-table.min.css" />
-<link rel="stylesheet" href="<%=basePath%>static/js-frame/bootstrap/css/jquery.dataTables.css" /> --%>
 
 
 <!-- =======================Extjs======================= -->
 <script type="text/javascript" src="<%=basePath%>static/js-frame/Extjs/ext-bootstrap.js"></script>
 <link rel="stylesheet" type="text/css" href="<%=basePath%>static/js-frame/Extjs/build/classic/theme-crisp/resources/theme-crisp-all.css" />
+
+<!-- ==========================SeaJs======================= -->
+<script type="text/javascript" src="<%=basePath%>static/js-frame/seajs/sea.js"></script>
+<script type="text/javascript" src="<%=basePath%>static/js-frame/seajs/runtime.js"></script>
+<script type="text/javascript" src="<%=basePath%>static/js-frame/seajs/runtime-debug.js"></script>
+<script type="text/javascript" src="<%=basePath%>static/js-frame/seajs/sea-debug.js"></script>
+<script type="text/javascript" src="<%=basePath%>static/js-frame/seajs/runtime-debug.js"></script>
+<script type="text/javascript" src="<%=basePath%>static/js-frame/seajs/runtime.js"></script>
+<!-- ==========================angularJs====================== -->
+<script type="text/javascript" src="<%=basePath%>static/js-frame/angularJs/angular.min.js"></script>

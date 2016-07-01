@@ -94,4 +94,9 @@ public class ModuleServiceImpl implements ModuleService {
 		
 		makeChildren(tmp, childList);
 	}
+	
+	public static void main(String[] args) {
+		List list = new ArrayList();
+		list.get(0);
+	}
 }
